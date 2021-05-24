@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Daily report</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+          <h2>DAILY SITE REPORTING</h2>
+          <p>Must submit this report daily by Site Supervisor</p>
+        </div>
+        <div class="row">
+          
+          <div class="column">
+            <form id="submit-form" action="" method="POST">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name..">
+
+              <div class="row"> 
+                  <div class="column">
+                    <label for="time">Enter the start Time </label>
+                    <input type="time" id="starttime" name="Start time" placeholder="Enter the start time">
+                  </div>
+                  <div class="column" >
+                    <label for="time" >Enter End Time </label>
+                    <input type="time" id="endtime" name="End time" placeholder="Enter the end time">
+                  </div>
+              </div>
+            
+              <label for="textarea">Enter the site</label>
+              <input type="text" id="text" name="option" placeholder="Enter the Site">
+              <label for="status">Work status</label>
+              <select id="status" name="Status">
+                <option value="Completed">Completed</option>
+                <option value="partialycompleted">partialycompleted</option>
+                <option value="Notcompleted">Not Completed</option>
+              </select>
+              <label for="site">Site</label>
+              <select id="siteselect" name="site">
+                  <option value="select">select</option>
+                <option value="cjtech">CJTECH</option>
+                <option value="Naresco">Naresco</option>
+                <option value="EGA">EGA</option>
+              </select>
+              <label for="workdone">Work done</label>
+              <textarea id="workdone" name="Work status" placeholder="Write work done...." style="height:140px"></textarea>
+              <input type="file" accept="image/*" name="Upload" onchange="loadFile(event)">
+                <img id="output"/>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          <div class="column">
+            <img src="https://media.istockphoto.com/vectors/green-technology-banner-design-square-banner-vector-id1140023876?k=6&m=1140023876&s=170667a&w=0&h=lHrQUAsgkNgGNk2lNBDija2ZPDrdewnmX4KT1aqosLk=" style="width:90%">
+          </div>
+        </div>
+      </div>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwtJ5uENmsbTwxGbZYSmGifnehIf5rJf_TFF1Xc-ebfUn2LSnFNTBS4mhdgiagjFS98/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("report submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>
