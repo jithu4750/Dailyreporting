@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/image/kedu-n.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Daily Report</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" >
+            <h2>DAILY SITE REPORTING</h2>
+            <p>Must submit this report daily by Site Supervisor</p>
+        </div>
+        <div class="row">
+          
+          <div class="column">
+            <form id="submit-form" action="" method="POST">
+                <label for="Date">Date</label>
+                <input type="date" id="date" name="Date" placeholder="Enter date" style="border-radius: 3px; border: 1px solid rgb(2, 39, 7); width: 40%; height: 30px;" required><br><br>
+                <label for="textarea">Enter the site</label>
+                <input type="text" id="text" name="option" placeholder="Enter the Site" required><br><br>
+                <label for="team">Team Members</label>
+                <input type="text" id="text" name="Team members" placeholder="Mention Team members...." required>
+                <div class="row" > 
+                    <div class="column" style="margin-left: -10px; border-radius: 3px; border-radius: 1px solid rgb(2, 39, 7) ;">
+                      <label for="time">Enter the start Time </label>
+                      <input type="time" id="starttime" name="Start time" placeholder="Enter the start time" required>
+                    </div>
+                    <div class="column ml-auto" >
+                     <span><label for="time" >Enter End Time </label></span> 
+                      <input type="time" id="endtime" name="End time" placeholder="Enter the end time" required>
+                    </div>
+                  </div>
+                <label for="workdone">Work done</label>
+                <textarea id="workdone" name="Work status" placeholder="Write work done...." style="height:130px" required></textarea>
+                <label for="Remark">Remark</label>
+                <textarea id="Remark" name="Remark" placeholder="Write remark...." style="height:130px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+          </div>
+          <div class="column">
+            <div class="container-image">
+                <p class="msg" style="width: 100%;">
+                  DAILY REPORT
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyAMHIIppNINLtLXVhizR_Z2_05lxHuS9ET96fNvIeS90V13PqwPGClF1AjzaOmn0uHow/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>

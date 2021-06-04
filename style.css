@@ -1,4 +1,6 @@
+
 * {
+    
     box-sizing: border-box;
   }
   
@@ -6,28 +8,33 @@
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 2px solid rgb(146, 144, 144);
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
   }
   
   input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #211080;
     color: white;
+    align-items: center;
     padding: 12px 20px;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
+    margin-left: 19em;
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #6f0e96;
   }
   
   /* Style the container/contact section */
   .container {
     border-radius: 5px;
-    background-color: #abdaa1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgb(86, 87, 167), rgb(177, 235, 243));
+    background-color: #9dd0f1;
     padding: 10px;
   }
   
@@ -53,6 +60,29 @@
       margin-top: 0;
     }
   }
-  ::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-image{
+width: 90%;
+height: 625px;
+max-width: 960px;
+margin: 0 auto;
+padding: 30px;
+background: rgb(255, 255, 255);
+background-image: url(/image/modern-dark-blue-combine-red-shape-banner-background_82226-24.jpg);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.msg{
+font-size: 85px;
+font-weight: bold;
+background: linear-gradient(to right, #7927b2, #fb3182);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+max-width: 350px;
+text-transform: uppercase;
+line-height: .77;
 }
