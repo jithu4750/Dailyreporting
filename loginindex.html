@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="icon" href="/image/178831-200.png">
+    <title>Daily_Login</title>
+</head>
+
+    <body>
+        <div class="sidenav">
+            <div class="login-main-text">
+               <h2>DAILY REPORTING<br> Login Page</h2>
+               <p>Login from here to access.</p>
+               <p>Any quaries please contact admin</p>
+            </div>
+         </div>
+         <div class="main">
+            <div class="col-md-6 col-sm-12">
+                <div class="login-form">
+        <form name="login">
+            <div class="form-group" style="margin-bottom: 14px; color: azure;">
+                <label>User Name</label>
+            <input type="text" name="userid"/>
+            </div>
+            <div class="form-group" style="margin-bottom: 14px;color: azure;">
+                <label>Password</label>
+            <input type="password" name="pswrd" style="margin-left: 10px;"/>
+            </div>
+            <div >
+            <button type="button" onclick="check(this.form)" class="btn btn-black" value="Login">Login</button>
+            <input type="reset" value="Cancel"/>
+            </div>
+        </form>
+         </div>
+        </div>
+         </div>
+        </div>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "Dhilshad" && form.pswrd.value == "DHKDIT005") {
+                    window.open('dhilshad.html',"_self")/*opens the target page while Id & password matches*/
+                    return false;
+                }
+                
+               else if(form.userid.value == "Jithin" && form.pswrd.value == "JTNKDIT001") {
+                    window.open('jithin.html',"_self")/*opens the target page while Id & password matches*/
+                    return ;
+                }
+                else if(form.userid.value == "Majeed" && form.pswrd.value == "MJKDIT002") {
+                    window.open('majeed.html',"_self")/*opens the target page while Id & password matches*/
+                    return ;
+                }
+                else if(form.userid.value == "Rajan" && form.pswrd.value == "RJNKDIT003") {
+                    window.open('rajan.html',"_self")/*opens the target page while Id & password matches*/
+                    return ;
+                }
+                else if(form.userid.value == "Masrood" && form.pswrd.value == "MSRDKDIT004") {
+                    window.open('Masrood.html',"_self")/*opens the target page while Id & password matches*/
+                    return ;
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+                
+            }
+        </script>
+    </body>
+</html>

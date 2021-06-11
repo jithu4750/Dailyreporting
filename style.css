@@ -1,4 +1,6 @@
 
+html { overflow-y: scroll; }
+
 * {
     
     box-sizing: border-box;
@@ -22,7 +24,7 @@
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    margin-left: 19em;
+    
   }
   
   input[type=submit]:hover {
@@ -73,16 +75,17 @@ padding: 30px;
 background: rgb(255, 255, 255);
 background-image: url(/image/modern-dark-blue-combine-red-shape-banner-background_82226-24.jpg);
 display: flex;
-justify-content: center;
+justify-content: left;
 align-items: center;
 }
 .msg{
-font-size: 85px;
+font-size: 60px;
 font-weight: bold;
 background: linear-gradient(to right, #7927b2, #fb3182);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-max-width: 350px;
+max-width: 300px;
 text-transform: uppercase;
-line-height: .77;
+line-height: .78;
+letter-spacing: 1px;
 }
