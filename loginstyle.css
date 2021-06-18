@@ -1,7 +1,10 @@
 
 body {
     font-family: "Lato", sans-serif;
-   background-image: url(/image/gradient-black-blue-linear-3840x2160-c2-000000-00ced1-a-15-f-14.svg);
+    background-image: url(/image/images.jpg);
+   background-size: 100% 310%;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 
