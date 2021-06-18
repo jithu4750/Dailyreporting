@@ -10,32 +10,31 @@
 </head>
 
     <body>
-        <div class="sidenav">
+        <div class="sidenav col-md-6 col-sm-12">
             <div class="login-main-text">
                <h2>DAILY REPORTING<br> Login Page</h2>
                <p>Login from here to access.</p>
                <p>Any quaries please contact admin</p>
             </div>
          </div>
-         <div class="main">
-            <div class="col-md-6 col-sm-12">
+         <div class="main col-md-6 col-sm-12">
                 <div class="login-form">
         <form name="login">
             <div class="form-group" style="margin-bottom: 14px; color: azure;">
                 <label>User Name</label>
-            <input type="text" name="userid"/>
+            <input class="user-id" type="text" name="userid"/>
             </div>
             <div class="form-group" style="margin-bottom: 14px;color: azure;">
                 <label>Password</label>
-            <input type="password" name="pswrd" style="margin-left: 10px;"/>
+            <input class="pswrd-l" type="password" name="pswrd" style="margin-left: 10px;"/>
             </div>
             <div >
             <button type="button" onclick="check(this.form)" class="btn btn-black" value="Login">Login</button>
-            <input type="reset" value="Cancel"/>
+            <input type="reset" class="btn-black " value="Cancel"/>
             </div>
         </form>
          </div>
-        </div>
+        
          </div>
         </div>
         <script language="javascript">
